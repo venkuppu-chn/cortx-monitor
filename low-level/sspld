@@ -611,7 +611,7 @@ def shutdown_handler(signum=None, frame=None):
 
 def print_usage():
     """Display the syntax usage for this script"""
-    print("""sspl_ll_d
+    print("""sspld
     -h:    Display this help
     """)
 
@@ -780,7 +780,7 @@ if __name__ == "__main__":
     # Initialize logging
     try:
         logging_level = Conf.get(SSPL_CONF, f"{SYSTEM_INFORMATION}>{LOG_LEVEL}", "INFO")
-        init_logging("SSPL-LL", logging_level, SYSLOG_HOST, SYSLOG_PORT)
+        init_logging("SSPL", logging_level, SYSLOG_HOST, SYSLOG_PORT)
 
     except Exception as err:
         # We don't have logger since it threw an exception, use generic 'print'
